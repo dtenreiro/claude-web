@@ -2,8 +2,8 @@
 export const siteConfig = {
   // Basic Info
   name: 'Daniel Tenreiro',
-  title: 'Investor & researcher',
-  tagline: 'AI systems for public‑market trading — research, infrastructure, and execution.',
+  title: 'Investor & Researcher',
+  tagline: 'Developing AI systems that enhance public-market trading strategies.',
   location: 'New York, USA',
 
   // URLs
@@ -11,22 +11,20 @@ export const siteConfig = {
 
   // Bio (used on home page)
   shortBio:
-    'Investor & researcher — building AI-native systems for public‑market trading.',
+    'Investor & researcher — developing AI systems for public‑market trading.',
 
   // Extended bio (used on about page)
-  fullBio: `I’m an investor and researcher building AI systems that improve how public‑market trading strategies are researched, implemented, and risk‑managed.
+  fullBio: `I am an investor, writer, and researcher developing AI systems that enhance public‑market trading strategies as managing partner of **Autoencoder Holdings**.
 
-I’m the managing partner of **Autoencoder Holdings**, where my work sits at the intersection of machine learning, market structure, and real‑world execution. I’m especially interested in the “infrastructure layer” of quant investing: data, modeling, portfolio construction, and the feedback loops that make systems robust.
+I previously worked as a research fellow at **Thiel Macro**, a global macro hedge fund in Los Angeles. Prior to that I worked at a NYC-based long/short equity fund after starting my career at **National Review**, where I covered finance and economics as a writer and editor. My writing has appeared in *National Review*, *City Journal*, and *The Spectator*, among other publications.
 
-Previously, I was a research fellow at **Thiel Macro** (Los Angeles). Before that, I worked at a New York long/short equity fund, and I started my career as a writer and editor at **National Review**, covering finance and economics. My writing has appeared in *National Review*, *City Journal*, and *The Spectator*.
-
-I grew up in New York City. I attended Regis High School (2015) and studied economics at Yale University (2019).`,
+I grew up in New York City and attended **Regis High School** (2015) before studying economics at **Yale University** (2019).`,
 
   // Current work
   currentRole: 'Managing Partner',
   currentCompany: 'Autoencoder Holdings',
   currentCompanyUrl: 'https://autoencoderholdings.com',
-  currentDescription: 'Building AI‑native research and trading infrastructure: data → models → portfolios → execution.',
+  currentDescription: 'Building AI‑native research and trading infrastructure.',
 
   // Experience
   experience: [
@@ -47,7 +45,7 @@ I grew up in New York City. I attended Regis High School (2015) and studied econ
     {
       title: 'Analyst',
       company: 'Long/Short Equity Fund',
-      companyUrl: '#',
+      companyUrl: '',
       period: 'Previous',
       description: 'Fundamental + systematic research, position sizing, and portfolio risk management.',
     },
@@ -92,7 +90,6 @@ I grew up in New York City. I attended Regis High School (2015) and studied econ
     twitter: 'https://x.com/tenreirodaniel',
     github: 'https://github.com/dtenreiro',
     linkedin: 'https://linkedin.com/in/dantenreiro',
-    // Add more links as needed
   },
 
   // All links for the links page
@@ -109,7 +106,6 @@ I grew up in New York City. I attended Regis High School (2015) and studied econ
       url: 'https://linkedin.com/in/dantenreiro',
       description: 'Professional profile',
     },
-    { name: 'Blog', url: '/blog', description: 'Writing' },
     // Add more links as needed
   ],
 
