@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Website
+
+A minimal, modern personal website built with Next.js 16, React 19, and Tailwind CSS 4. Designed for simplicity and easy customization.
+
+## Features
+
+- **Home** - Introduction with name, title, bio, and current role
+- **About** - Extended biography and work experience
+- **Now** - What you're currently focused on ([now page](https://nownownow.com/about) concept)
+- **Links** - All your social and contact links in one place
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org/) - React framework with static export
+- [React 19](https://react.dev/) - UI library
+- [Tailwind CSS 4](https://tailwindcss.com/) - Utility-first CSS
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20+
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Generates a static export in the `out` directory.
 
-To learn more about Next.js, take a look at the following resources:
+## Customization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All personal content is centralized in `src/lib/config.ts`. Update this file to personalize your site:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```typescript
+export const siteConfig = {
+  name: "Your Name",
+  title: "Your Title",
+  tagline: "A brief tagline about yourself",
+  location: "City, Country",
+  shortBio: "...",
+  fullBio: "...",
+  currentRole: "...",
+  currentCompany: "...",
+  experience: [...],
+  now: {...},
+  links: {...},
+  // ...
+};
+```
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This site is configured for GitHub Pages deployment with automatic builds on push to `main`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### GitHub Pages Setup
+
+1. Go to your repository Settings > Pages
+2. Set Source to "GitHub Actions"
+3. Push to `main` to trigger deployment
+
+The site will be available at `https://yourusername.github.io/claude-web/`
+
+### Custom Domain
+
+To use a custom domain, update `next.config.ts`:
+
+```typescript
+const nextConfig: NextConfig = {
+  output: "export",
+  basePath: "", // Remove basePath for custom domain
+  assetPrefix: "",
+  // ...
+};
+```
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── page.tsx        # Home page
+│   ├── about/page.tsx  # About page
+│   ├── now/page.tsx    # Now page
+│   ├── links/page.tsx  # Links page
+│   └── layout.tsx      # Root layout
+├── components/
+│   ├── navigation.tsx  # Site navigation
+│   └── footer.tsx      # Site footer
+└── lib/
+    └── config.ts       # Site configuration
+```
+
+## License
+
+MIT
