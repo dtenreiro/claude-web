@@ -21,7 +21,7 @@ export const containerClasses = 'w-[90%] max-w-6xl';
 /**
  * Article spacing classes for page layouts
  */
-export const articleSpacingClasses = 'space-y-32 md:space-y-40 lg:space-y-48';
+export const articleSpacingClasses = 'space-y-32 md:space-y-48 lg:space-y-64';
 
 /**
  * Link hover transition classes

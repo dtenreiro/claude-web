@@ -13,7 +13,7 @@ export default function LinksPage() {
   return (
     <article className={articleSpacingClasses}>
       {/* Header */}
-      <header className="space-y-8 py-16 md:py-20 lg:py-24">
+      <header className="space-y-8 py-20 md:py-28 lg:py-32">
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight">Links</h1>
         <p className="text-xl md:text-2xl py-4 text-muted-foreground font-light">
           Find me elsewhere on the internet.
@@ -21,7 +21,7 @@ export default function LinksPage() {
       </header>
 
       {/* Links Grid */}
-      <section className="space-y-12 py-16 md:py-20 lg:py-24">
+      <section className="space-y-16 py-20 md:py-28 lg:py-32">
         <SectionHeader title="Connect" className="py-8 md:py-10" />
         <div className="grid gap-6 py-6 sm:grid-cols-2">
           {siteConfig.allLinks.map((link, index) => {
