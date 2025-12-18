@@ -16,7 +16,7 @@ export default function HomePage() {
     <>
       <article className={articleSpacingClasses}>
         <header className="space-y-6 py-12 md:py-16">
-          <h2 className="text-3xl py-4 md:text-3xl font-bold tracking-tight leading-tight">
+          <h2 className="text-4xl py-4 md:text-4xl font-bold tracking-tight leading-tight">
             About Daniel
           </h2>
         </header>
