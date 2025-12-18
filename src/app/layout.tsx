@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.tagline,
+  description: siteConfig.name,
   openGraph: {
     title: siteConfig.name,
-    description: siteConfig.tagline,
+    description: siteConfig.name,
     url: siteConfig.siteUrl,
     siteName: siteConfig.name,
     locale: 'en_US',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
-    description: siteConfig.tagline,
+    description: siteConfig.name,
   },
   robots: {
     index: true,

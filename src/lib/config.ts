@@ -2,8 +2,6 @@
 export const siteConfig = {
   // Basic Info
   name: 'Daniel Tenreiro',
-  title: 'Investor & Researcher',
-  tagline: 'Developing AI systems that enhance public-market trading strategies.',
   location: 'New York, USA',
 
   // URLs

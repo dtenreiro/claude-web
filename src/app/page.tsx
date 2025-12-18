@@ -4,9 +4,8 @@ export default function HomePage() {
   return (
     <>
       {/* Header */}
-      <header className="space-y-6 mb-24 md:mb-32">
+      <header className="mb-24 md:mb-32">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">{siteConfig.name}</h1>
-        <p className="text-xl md:text-2xl text-muted-foreground font-light">{siteConfig.tagline}</p>
       </header>
 
       <article className="space-y-24 md:space-y-32 lg:space-y-40">
