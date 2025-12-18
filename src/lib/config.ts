@@ -100,7 +100,6 @@ I post regularly on Twitter and am reachable at the email icon linked to the lef
   // Navigation
   navigation: [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
     { name: "Now", href: "/now" },
     { name: "Links", href: "/links" },
   ],
