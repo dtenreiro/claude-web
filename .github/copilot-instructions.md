@@ -1,0 +1,22 @@
+# Copilot Instructions for claude-web
+
+- **Stack**: Next.js 16 App Router with TypeScript/ESM and Tailwind CSS v4 (via `@import "tailwindcss"` in [src/app/globals.css](src/app/globals.css)). Path alias `@/*` maps to `src/*` (see [tsconfig.json](tsconfig.json)). Metadata is set per route and in the root layout.
+- **Content source of truth**: All personal/site text, navigation, and social links live in [src/lib/config.ts](src/lib/config.ts). Pages read from this object; keep its shape stable when adding fields. Update this file instead of hard-coding strings in pages/components.
+- **Layout & chrome**: Global shell in [src/app/layout.tsx](src/app/layout.tsx) renders `Navigation`, `Footer`, and injects metadata derived from `siteConfig`. Body uses a vertical flex layout; leave `main` as the scrolling content area.
+- **Navigation component**: [src/components/navigation.tsx](src/components/navigation.tsx) is a client component using `usePathname` to highlight the active link. The menu items come from `siteConfig.navigation`; add routes there to surface new pages.
+- **Footer component**: [src/components/footer.tsx](src/components/footer.tsx) pulls social links from `siteConfig.links` and renders the current year. Prefer extending `links` rather than editing the component.
+- **Pages pattern**: Current routes (`/`, `/about`, `/now`, `/links`) live under `src/app/**/page.tsx` and are simple server components consuming `siteConfig`. Follow this pattern for new static pages: define `export const metadata`, render content with siteConfig-driven text, and keep layout classes consistent (container max width `max-w-2xl`, `mx-auto`, `px-6`, `py-16 md:py-24`).
+- **Styling conventions**: Use Tailwind utility classes; colors are defined as CSS vars in [globals.css](src/app/globals.css) with light/dark `prefers-color-scheme`. Avoid inline styles; prefer existing color tokens (`background`, `foreground`, `muted`, `border`, `accent`).
+- **SVG & icons**: Inline SVG is used in the Links page; follow that approach instead of adding icon libraries unless justified.
+- **Internationalization**: `lang="en"` is set in the root layout; no i18n framework is present.
+- **Build & dev**: `npm run dev` to start, `npm run build` for production, `npm run start` to serve, `npm run lint` for ESLint (Next + core-web-vitals). No test suite is configured.
+- **Adding data-driven sections**: For lists (experience, links, now sections), extend the arrays in `siteConfig`; components map over them. Preserve the existing keys (`title`, `company`, `period`, etc.) to avoid TypeScript errors.
+- **Metadata**: Route metadata should be declared via `export const metadata` (see [src/app/about/page.tsx](src/app/about/page.tsx), [src/app/links/page.tsx](src/app/links/page.tsx), [src/app/now/page.tsx](src/app/now/page.tsx)). Keep descriptions in sync with `siteConfig.tagline` where relevant.
+- **Accessibility**: Links opening in new tabs include `rel="noopener noreferrer"`; keep that convention. The site relies on semantic HTML headings and paragraph tags; maintain heading hierarchy.
+- **Routing**: Navigation uses exact pathname match; ensure new routes use stable `href` strings in `siteConfig.navigation` that match folder names under `src/app`.
+- **Deployment**: No custom Next config; default `next.config.ts` is empty. Assume Vercel-style deployment unless specified otherwise.
+- **Common tasks**:
+  - Update personal info: edit [src/lib/config.ts](src/lib/config.ts) and let pages render automatically.
+  - Add a new page: create `src/app/<route>/page.tsx`, add metadata, and add the route to `siteConfig.navigation`.
+  - Adjust theming: tweak CSS variables and `@theme inline` tokens in [globals.css](src/app/globals.css).
+- **Avoid**: Introducing new styling systems (CSS-in-JS) or routing paradigms without consensus; hard-coding strings directly in components that should live in `siteConfig`; removing `suppressHydrationWarning` on `<html>` unless you address hydration diffs.
