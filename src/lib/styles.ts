@@ -11,7 +11,7 @@ export const focusRingClasses =
  * Section header classes for consistent styling
  */
 export const sectionHeaderClasses =
-  'pt-4 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4';
+  'pt-4 text-lg font-bold tracking-[0.1em] uppercase text-muted-foreground/60 border-b border-border pb-4';
 
 /**
  * Container width classes for consistent layout
