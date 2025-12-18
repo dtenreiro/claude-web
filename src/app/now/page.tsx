@@ -12,7 +12,7 @@ export default function NowPage() {
   return (
     <article className={articleSpacingClasses}>
       {/* Header */}
-      <header className="space-y-6">
+      <header className="space-y-6 py-12 md:py-16">
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight">Now</h1>
         <div className="space-y-2">
           <p className="font-light text-xl md:text-2xl text-muted-foreground">
@@ -27,8 +27,8 @@ export default function NowPage() {
       {/* Sections */}
       <div className="space-y-20">
         {siteConfig.now.sections.map((section, index) => (
-          <section key={index} className="space-y-6">
-            <SectionHeader title={section.title} />
+          <section key={index} className="space-y-6 py-10 md:py-12">
+            <SectionHeader title={section.title} className="py-6 md:py-8" />
             <p className="text-lg text-foreground leading-relaxed max-w-4xl">{section.content}</p>
           </section>
         ))}

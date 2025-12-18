@@ -15,16 +15,21 @@ export default function HomePage() {
   return (
     <>
       <article className={articleSpacingClasses}>
-        <section className="space-y-16">
-          <SectionHeader title="Bio" />
+        <header className="space-y-6 py-12 md:py-16">
+          <h2 className="text-3xl py-4 md:text-3xl font-bold tracking-tight leading-tight">
+            About Daniel
+          </h2>
+        </header>
+        <section className="space-y-16 pt-16 md:pt-20">
+          <SectionHeader title="Bio" className="py-8 md:py-10" />
           <div className="prose prose-neutral dark:prose-invert max-w-none">
             {renderBioParagraphs(siteConfig.fullBio)}
           </div>
         </section>
 
         {/* Experience */}
-        <section className="space-y-16">
-          <SectionHeader title="Experience" />
+        <section className="space-y-16 py-12 md:py-16">
+          <SectionHeader title="Experience" className="py-8 md:py-10" />
           <div className="space-y-16">
             {siteConfig.experience.map((job, index) => (
               <ExperienceItem
@@ -39,8 +44,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="space-y-16 pt-12 md:pt-16">
-          <SectionHeader title="Education" className="pt-6" />
+        <section className="space-y-16 pt-24 md:pt-32">
+          <SectionHeader title="Education" className="py-8 md:py-10" />
           <div className="space-y-16">
             <EducationItem institution="Yale University" year="2019" degree="B.A. Economics" />
             <EducationItem institution="Regis High School" year="2015" />
