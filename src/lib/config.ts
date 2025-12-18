@@ -11,7 +11,7 @@ export const siteConfig = {
   shortBio:
     'Investor & researcher.',
 
-  // Extended bio (used on about page)
+  // Extended bio (used on home page)
   fullBio: `I am an investor, writer, and researcher developing AI systems that enhance public‑market trading strategies as managing partner of **Autoencoder Holdings**.
 
 I previously worked as a research fellow at **Thiel Macro**, a global macro hedge fund in Los Angeles. Prior to that I worked at a NYC-based long/short equity fund after starting my career at **National Review**, where I covered finance and economics as a writer and editor. My writing has appeared in *National Review*, *City Journal*, and *The Spectator*, among other publications.
