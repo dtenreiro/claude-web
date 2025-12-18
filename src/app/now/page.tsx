@@ -8,26 +8,26 @@ export const metadata: Metadata = {
 
 export default function NowPage() {
   return (
-    <article className="space-y-20">
+    <article className="space-y-24 md:space-y-32">
       {/* Header */}
-      <header className="space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Now</h1>
-        <div className="space-y-1">
-          <p className="font-medium text-lg">
+      <header className="space-y-6">
+        <h1 className="text-5xl md:text-6xl font-bold tracking-tight">Now</h1>
+        <div className="space-y-2">
+          <p className="font-light text-xl md:text-2xl text-muted-foreground">
             What I&apos;m focused on at this point in my life.
           </p>
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground/60 text-sm font-medium uppercase tracking-widest">
             Last updated: {siteConfig.now.updated}
           </p>
         </div>
       </header>
 
       {/* Sections */}
-      <div className="space-y-12">
+      <div className="space-y-20">
         {siteConfig.now.sections.map((section, index) => (
-          <section key={index} className="space-y-4">
-            <h2 className="text-sm font-semibold tracking-wider uppercase text-muted-foreground/80">{section.title}</h2>
-            <p className="text-foreground leading-relaxed">{section.content}</p>
+          <section key={index} className="space-y-6">
+            <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">{section.title}</h2>
+            <p className="text-lg text-foreground leading-relaxed max-w-4xl">{section.content}</p>
           </section>
         ))}
       </div>

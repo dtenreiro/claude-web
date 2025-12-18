@@ -8,16 +8,16 @@ export const metadata: Metadata = {
 
 export default function LinksPage() {
   return (
-    <article className="space-y-20">
+    <article className="space-y-24 md:space-y-32">
       {/* Header */}
-      <header className="space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Links</h1>
-        <p className="text-muted-foreground">Find me elsewhere on the internet.</p>
+      <header className="space-y-6">
+        <h1 className="text-5xl md:text-6xl font-bold tracking-tight">Links</h1>
+        <p className="text-xl md:text-2xl text-muted-foreground font-light">Find me elsewhere on the internet.</p>
       </header>
 
       {/* Links Grid */}
-      <section className="space-y-4">
-        <div className="grid gap-3">
+      <section className="space-y-8">
+        <div className="grid gap-4 sm:grid-cols-2">
           {siteConfig.allLinks.map((link, index) => (
             <a
               key={index}

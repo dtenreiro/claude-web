@@ -77,8 +77,8 @@ a {
 
 /* Prose styles for content */
 .prose {
-  line-height: 1.8;
-  font-size: 1.0625rem;
+  line-height: 1.85;
+  font-size: 1.125rem;
 }
 
 .prose p {

@@ -5,7 +5,6 @@ A minimal, modern personal website built with Next.js 16, React 19, and Tailwind
 ## Features
 
 - **Home** - Introduction with name, title, bio, and current role
-- **About** - Extended biography and work experience
 - **Now** - What you're currently focused on ([now page](https://nownownow.com/about) concept)
 - **Links** - All your social and contact links in one place
 
@@ -115,7 +114,6 @@ const nextConfig: NextConfig = {
 src/
 ├── app/
 │   ├── page.tsx        # Home page
-│   ├── about/page.tsx  # About page
 │   ├── now/page.tsx    # Now page
 │   ├── links/page.tsx  # Links page
 │   └── layout.tsx      # Root layout

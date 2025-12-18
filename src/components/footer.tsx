@@ -5,7 +5,7 @@ export function Footer() {
 
   return (
     <footer className="border-border flex justify-center border-t">
-      <div className="w-full max-w-3xl px-6 py-12 md:py-16 lg:py-20">
+      <div className="w-[90%] max-w-6xl py-16 md:py-24 lg:py-32">
         <div className="text-muted-foreground flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
           <p>
             &copy; {currentYear} {siteConfig.name}
