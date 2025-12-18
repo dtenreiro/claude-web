@@ -11,7 +11,7 @@ export const focusRingClasses =
  * Section header classes for consistent styling
  */
 export const sectionHeaderClasses =
-  'pt-8 text-lg font-bold tracking-[0.1em] uppercase text-muted-foreground/60 border-b border-border pb-8';
+  'text-base font-bold tracking-[0.1em] uppercase text-muted-foreground/80 border-b border-border pb-2';
 
 /**
  * Container width classes for consistent layout
@@ -19,9 +19,29 @@ export const sectionHeaderClasses =
 export const containerClasses = 'w-[90%] max-w-6xl';
 
 /**
- * Article spacing classes for page layouts
+ * Article spacing classes for page layouts (main sections)
  */
-export const articleSpacingClasses = 'space-y-32 md:space-y-48 lg:space-y-64';
+export const articleSpacingClasses = 'flex flex-col gap-4 md:gap-6';
+
+/**
+ * Section internal spacing (between header and content)
+ */
+export const sectionSpacingClasses = 'flex flex-col gap-1 md:gap-2';
+
+/**
+ * Shared vertical padding for the main container
+ */
+export const pagePaddingClasses = 'px-4 pt-6 pb-6 md:pt-8 md:pb-8';
+
+/**
+ * Shared vertical padding for the navigation
+ */
+export const navPaddingClasses = 'py-4 md:py-4 lg:py-4';
+
+/**
+ * Shared vertical padding for the footer
+ */
+export const footerPaddingClasses = 'py-6 md:py-6 lg:py-6';
 
 /**
  * Link hover transition classes

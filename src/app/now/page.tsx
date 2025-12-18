@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
-import { articleSpacingClasses, focusRingClasses } from '@/lib/styles';
 import { SectionHeader } from '@/components/section-header';
+import { articleSpacingClasses, sectionSpacingClasses, focusRingClasses } from '@/lib/styles';
 
 export const metadata: Metadata = {
   title: 'Now',
@@ -12,32 +12,32 @@ export default function NowPage() {
   return (
     <article className={articleSpacingClasses}>
       {/* Header */}
-      <header className="space-y-8 py-20 md:py-28 lg:py-32">
-        <h2 className="text-4xl py-6 md:text-5xl font-bold tracking-tight leading-tight">
+      <header className={sectionSpacingClasses}>
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
           Now
-        </h2>
-      </header>
-      <section className="space-y-24 pt-24 md:pt-32 lg:pt-40">
-        <p className="text-xl md:text-2xl py-4 text-muted-foreground font-light leading-relaxed">
-          What I&apos;m focused on at this point in my life.
-        </p>
-        <div className="prose prose-neutral dark:prose-invert max-w-none py-2">
-          Last updated: {siteConfig.now.updated}.
+        </h1>
+        <div className={sectionSpacingClasses}>
+          <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
+            What I&apos;m focused on at this point in my life.
+          </p>
+          <div className="text-foreground">
+            Last updated: {siteConfig.now.updated}.
+          </div>
         </div>
-      </section>
+      </header>
 
       {/* Sections */}
-      <div className="space-y-24 md:space-y-28 lg:space-y-32">
+      <div className={articleSpacingClasses}>
         {siteConfig.now.sections.map((section, index) => (
-          <section key={index} className="space-y-12 py-16 md:py-20 lg:py-24">
-            <SectionHeader title={section.title} className="py-12 md:py-14" />
+          <section key={index} className={sectionSpacingClasses}>
+            <SectionHeader title={section.title} />
             <p className="text-lg text-foreground leading-loose max-w-4xl">{section.content}</p>
           </section>
         ))}
       </div>
 
       {/* Footer note */}
-      <footer className="border-border border-t pt-16 md:pt-20">
+      <footer className="border-border border-t pt-10 md:pt-12 lg:pt-14">
         <p className="text-muted-foreground text-sm">
           This is a{' '}
           <a

@@ -30,6 +30,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { pagePaddingClasses } from '@/lib/styles';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -37,10 +39,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="flex min-h-screen flex-col antialiased">
+      <body className="flex min-h-dvh flex-col antialiased">
         <Navigation />
         <main className="flex w-full flex-1 flex-col items-center">
-          <Container className="px-4 py-32 md:py-48 lg:py-56">{children}</Container>
+          <Container className={pagePaddingClasses}>{children}</Container>
         </main>
         <Footer />
       </body>

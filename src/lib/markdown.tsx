@@ -20,7 +20,7 @@ export function parseBoldText(text: string): ReactNode[] {
 /**
  * Render paragraphs with markdown-style bold text support
  */
-export function renderBioParagraphs(fullBio: string): ReactNode {
+export function renderBioParagraphs(fullBio: string): ReactNode[] {
   return fullBio.split('\n\n').map((paragraph, index) => (
     <p key={index} className="text-foreground leading-relaxed">
       {parseBoldText(paragraph)}

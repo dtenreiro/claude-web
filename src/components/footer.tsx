@@ -1,6 +1,6 @@
 import { siteConfig } from '@/lib/config';
-import { containerClasses } from '@/lib/styles';
 import { ExternalLink } from '@/components/external-link';
+import { containerClasses, footerPaddingClasses } from '@/lib/styles';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +13,7 @@ export function Footer() {
 
   return (
     <footer className="border-border flex justify-center border-t">
-      <div className={`${containerClasses} py-16 md:py-24 lg:py-32`}>
+      <div className={`${containerClasses} ${footerPaddingClasses}`}>
         <div className="text-muted-foreground flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
           <p>
             &copy; {currentYear} {siteConfig.name}

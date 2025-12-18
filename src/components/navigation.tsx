@@ -3,14 +3,14 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { siteConfig } from '@/lib/config';
-import { containerClasses, focusRingClasses } from '@/lib/styles';
+import { containerClasses, focusRingClasses, navPaddingClasses } from '@/lib/styles';
 
 export function Navigation() {
   const pathname = usePathname();
 
   return (
     <header className="bg-background/80 border-border sticky top-0 z-50 flex justify-center border-b backdrop-blur-sm">
-      <nav className={`${containerClasses} py-6 md:py-8 lg:py-8`}>
+      <nav className={`${containerClasses} ${navPaddingClasses}`}>
         <div className="flex items-center justify-between">
           <Link
             href="/"
@@ -23,7 +23,7 @@ export function Navigation() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`text-sm transition-colors rounded-md ${focusRingClasses} focus-visible:text-foreground ${pathname === item.href
+                  className={`text-md transition-colors rounded-md ${focusRingClasses} focus-visible:text-foreground ${pathname === item.href
                     ? 'text-foreground'
                     : 'text-muted-foreground hover:text-foreground'
                     }`}
