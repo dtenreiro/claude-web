@@ -10,7 +10,7 @@ export function Navigation() {
 
   return (
     <header className="bg-background/80 border-border sticky top-0 z-50 flex justify-center border-b backdrop-blur-sm">
-      <nav className={`${containerClasses} py-16 md:py-16 lg:py-16`}>
+      <nav className={`${containerClasses} py-6 md:py-8 lg:py-8`}>
         <div className="flex items-center justify-between">
           <Link
             href="/"

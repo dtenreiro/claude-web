@@ -40,7 +40,7 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col antialiased">
         <Navigation />
         <main className="flex w-full flex-1 flex-col items-center">
-          <Container className="px-4 py-20 md:py-32 lg:py-40">{children}</Container>
+          <Container className="px-4 py-32 md:py-48 lg:py-56">{children}</Container>
         </main>
         <Footer />
       </body>
