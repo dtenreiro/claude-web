@@ -2,24 +2,9 @@ import { siteConfig } from '@/lib/config';
 
 export default function HomePage() {
   return (
-    <article className="space-y-24">
-      {/* Intro */}
-      <header className="space-y-6 py-8">
-        <div className="space-y-2">
-          {/* <h1 className="text-3xl font-bold tracking-tight md:text-4xl">{siteConfig.name}</h1> */}
-          {/* <div className="flex flex-wrap items-center gap-x-2 text-muted-foreground">
-            <span className="text-foreground font-medium">{siteConfig.title}</span>
-            <span aria-hidden="true">/</span>
-            <span>{siteConfig.location}</span>
-          </div> */}
-        </div>
-        {/* <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
-          {siteConfig.tagline}
-        </p> */}
-      </header>
-
+    <article className="space-y-16 md:space-y-24">
       {/* Bio */}
-      <section className="prose prose-neutral dark:prose-invert max-w-none py-8">
+      <section className="prose prose-neutral dark:prose-invert max-w-none">
         {siteConfig.fullBio.split('\n\n').map((paragraph, index) => {
           // Simple bold replacement for the bio
           const parts = paragraph.split(/(\*\*.*?\*\*)/g);
@@ -37,9 +22,9 @@ export default function HomePage() {
       </section>
 
       {/* Experience */}
-      <section className="space-y-6 py-8">
-        <h2 className="text-xl font-semibold tracking-tight">Experience</h2>
-        <div className="space-y-8">
+      <section className="space-y-8">
+        <h2 className="text-sm font-semibold tracking-wider uppercase text-muted-foreground/80">Experience</h2>
+        <div className="space-y-12">
           {siteConfig.experience.map((job, index) => (
             <div key={index} className="space-y-2">
               <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
@@ -67,9 +52,9 @@ export default function HomePage() {
       </section>
 
       {/* Education */}
-      <section className="space-y-6 py-8">
-        <h2 className="text-xl font-semibold tracking-tight">Education</h2>
-        <div className="space-y-8">
+      <section className="space-y-8">
+        <h2 className="text-sm font-semibold tracking-wider uppercase text-muted-foreground/80">Education</h2>
+        <div className="space-y-10">
           <div className="space-y-1">
             <div className="flex items-baseline justify-between">
               <h3 className="font-medium text-foreground">Yale University</h3>

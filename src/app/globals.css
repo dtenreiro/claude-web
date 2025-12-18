@@ -1,26 +1,28 @@
 @import 'tailwindcss';
 
 :root {
-  /* Light mode colors */
-  --background: #fafafa;
-  --foreground: #171717;
-  --muted: #f5f5f5;
-  --muted-foreground: #737373;
-  --border: #e5e5e5;
-  --accent: #0a0a0a;
-  --accent-foreground: #fafafa;
+  /* Light mode colors - Sophisticated Neutral Palette */
+  --background: #ffffff;
+  --foreground: #111827;
+  --muted: #f9fafb;
+  --muted-foreground: #6b7280;
+  --border: #e5e7eb;
+  --accent: #111827;
+  --accent-foreground: #ffffff;
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark mode colors */
-    --background: #0a0a0a;
-    --foreground: #fafafa;
-    --muted: #171717;
-    --muted-foreground: #a3a3a3;
-    --border: #262626;
-    --accent: #fafafa;
-    --accent-foreground: #0a0a0a;
+    /* Dark mode colors - Deep Slate Palette */
+    --background: #030712;
+    --foreground: #f9fafb;
+    --muted: #111827;
+    --muted-foreground: #9ca3af;
+    --border: #1f2937;
+    --accent: #f9fafb;
+    --accent-foreground: #030712;
   }
 }
 
@@ -32,6 +34,7 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --font-sans: var(--font-sans);
 }
 
 * {
@@ -42,73 +45,87 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
+  font-family: var(--font-sans);
+  line-height: 1.625;
 }
 
 /* Selection */
 ::selection {
-  background-color: var(--foreground);
-  color: var(--background);
+  background-color: var(--accent);
+  color: var(--accent-foreground);
 }
 
 /* Links */
 a {
   color: inherit;
   text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 /* Prose styles for content */
 .prose {
-  line-height: 1.75;
+  line-height: 1.8;
+  font-size: 1.0625rem;
 }
 
 .prose p {
-  margin-bottom: 1.25em;
+  margin-bottom: 1.5em;
 }
 
 .prose a {
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
+  decoration-thickness: 1px;
+  text-decoration-color: var(--border);
+  transition: text-decoration-color 0.2s ease;
 }
 
 .prose a:hover {
-  opacity: 0.8;
+  text-decoration-color: var(--foreground);
 }
 
 .prose h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin-top: 2em;
-  margin-bottom: 0.75em;
+  letter-spacing: -0.025em;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  color: var(--foreground);
 }
 
 .prose h3 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  letter-spacing: -0.0125em;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
 }
 
 .prose ul,
 .prose ol {
   padding-left: 1.5em;
-  margin-bottom: 1.25em;
+  margin-bottom: 1.5em;
 }
 
 .prose li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.75em;
+}
+
+/* Custom Utilities */
+.text-balance {
+  text-wrap: balance;
 }
 
 /* Smooth transitions */
-.transition-colors {
-  transition-property: color, background-color, border-color;
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  transition-duration: 200ms;
 }

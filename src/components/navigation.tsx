@@ -9,7 +9,7 @@ export function Navigation() {
 
   return (
     <header className="bg-background/80 border-border sticky top-0 z-50 flex justify-center border-b backdrop-blur-sm">
-      <nav className="w-[88%] py-8">
+      <nav className="w-full max-w-2xl px-6 py-6 md:py-8">
         <div className="flex items-center justify-between">
           <Link
             href="/"

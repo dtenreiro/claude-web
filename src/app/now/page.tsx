@@ -23,11 +23,11 @@ export default function NowPage() {
       </header>
 
       {/* Sections */}
-      <div className="space-y-10">
+      <div className="space-y-12">
         {siteConfig.now.sections.map((section, index) => (
-          <section key={index} className="space-y-3">
-            <h2 className="text-xl font-semibold">{section.title}</h2>
-            <p className="text-muted-foreground leading-relaxed">{section.content}</p>
+          <section key={index} className="space-y-4">
+            <h2 className="text-sm font-semibold tracking-wider uppercase text-muted-foreground/80">{section.title}</h2>
+            <p className="text-foreground leading-relaxed">{section.content}</p>
           </section>
         ))}
       </div>
