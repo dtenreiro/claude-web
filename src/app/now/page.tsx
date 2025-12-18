@@ -8,8 +8,7 @@ export const metadata: Metadata = {
 
 export default function NowPage() {
   return (
-    <div className="max-w-2xl mx-auto px-6 py-16 md:py-24">
-      <article className="space-y-12">
+    <article className="space-y-12">
         {/* Header */}
         <header className="space-y-4">
           <h1 className="text-3xl font-bold tracking-tight">Now</h1>
@@ -49,7 +48,6 @@ export default function NowPage() {
             . If you have your own site, you should make one too.
           </p>
         </footer>
-      </article>
-    </div>
+    </article>
   );
 }
