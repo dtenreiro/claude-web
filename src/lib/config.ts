@@ -2,54 +2,54 @@
 export const siteConfig = {
   // Basic Info
   name: 'Daniel Tenreiro',
-  title: 'Investor, Writer & Researcher',
-  tagline: 'Developing AI systems that enhance public-market trading strategies',
+  title: 'Investor & researcher',
+  tagline: 'AI systems for public‑market trading — research, infrastructure, and execution.',
   location: 'New York, USA',
 
   // URLs
-  siteUrl: 'https://yoursite.com',
+  siteUrl: 'https://danieltenreiro.com',
 
   // Bio (used on home page)
   shortBio:
-    'I am an investor, writer, and researcher developing AI systems that enhance public-market trading strategies as managing partner of Autoencoder Holdings.',
+    'Investor & researcher — building AI-native systems for public‑market trading.',
 
   // Extended bio (used on about page)
-  fullBio: `I am an investor, writer, and researcher developing AI systems that enhance public-market trading strategies as managing partner of Autoencoder Holdings.
+  fullBio: `I’m an investor and researcher building AI systems that improve how public‑market trading strategies are researched, implemented, and risk‑managed.
 
-I previously worked as a research fellow at Thiel Macro, a global macro hedge fund in Los Angeles. Prior to that I worked at a NYC-based long/short equity fund after starting my career at National Review, where I covered finance and economics as a writer and editor. My writing has appeared in National Review, City Journal, and The Spectator, among other publications.
+I’m the managing partner of **Autoencoder Holdings**, where my work sits at the intersection of machine learning, market structure, and real‑world execution. I’m especially interested in the “infrastructure layer” of quant investing: data, modeling, portfolio construction, and the feedback loops that make systems robust.
 
-I grew up in New York City and attended Regis High School (2015) before studying economics at Yale University (2019).
+Previously, I was a research fellow at **Thiel Macro** (Los Angeles). Before that, I worked at a New York long/short equity fund, and I started my career as a writer and editor at **National Review**, covering finance and economics. My writing has appeared in *National Review*, *City Journal*, and *The Spectator*.
 
-I post regularly on Twitter and am reachable at the email icon linked to the left. Please get in touch — I have met great friends and collaborators online.`,
+I grew up in New York City. I attended Regis High School (2015) and studied economics at Yale University (2019).`,
 
   // Current work
   currentRole: 'Managing Partner',
   currentCompany: 'Autoencoder Holdings',
-  currentCompanyUrl: 'https://autoencoder.com',
-  currentDescription: 'Developing AI systems that enhance public-market trading strategies.',
+  currentCompanyUrl: 'https://autoencoderholdings.com',
+  currentDescription: 'Building AI‑native research and trading infrastructure: data → models → portfolios → execution.',
 
   // Experience
   experience: [
     {
       title: 'Managing Partner',
       company: 'Autoencoder Holdings',
-      companyUrl: 'https://autoencoder.com',
+      companyUrl: 'https://autoencoderholdings.com',
       period: 'Present',
-      description: 'Developing AI systems that enhance public-market trading strategies.',
+      description: 'Building AI‑native research and trading infrastructure: data → models → portfolios → execution.',
     },
     {
       title: 'Research Fellow',
       company: 'Thiel Macro',
-      companyUrl: 'https://thielmacro.com',
+      companyUrl: '',
       period: 'Previous',
-      description: 'Global macro hedge fund research in Los Angeles.',
+      description: 'Global macro research with an emphasis on regime shifts, positioning, and risk.',
     },
     {
       title: 'Analyst',
       company: 'Long/Short Equity Fund',
       companyUrl: '#',
       period: 'Previous',
-      description: 'NYC-based long/short equity fund.',
+      description: 'Fundamental + systematic research, position sizing, and portfolio risk management.',
     },
     {
       title: 'Writer & Editor',
@@ -57,7 +57,7 @@ I post regularly on Twitter and am reachable at the email icon linked to the lef
       companyUrl: 'https://nationalreview.com',
       period: 'Previous',
       description:
-        'Covered finance and economics. Writing also appeared in City Journal and The Spectator.',
+        'Covered finance and economics; essays also published in National Review, City Journal, and The Spectator.',
     },
   ],
 
@@ -68,44 +68,48 @@ I post regularly on Twitter and am reachable at the email icon linked to the lef
       {
         title: 'Working',
         content:
-          'Developing AI systems that enhance public-market trading strategies at Autoencoder Holdings.',
+          'Building AI systems and infrastructure that make public‑market strategies more adaptive and more honest about uncertainty.',
       },
       {
         title: 'Writing',
         content:
-          'Writing about finance, economics, and markets. My work has appeared in National Review, City Journal, and The Spectator.',
+          'Writing about markets, economics, and the craft of investing—especially where narratives collide with incentives.',
       },
       {
         title: 'Living',
-        content: 'Based in New York City. Regis High School (2015), Yale University (2019).',
+        content: 'New York City. Regis High School (2015), Yale University (2019).',
+      },
+      {
+        title: 'Thinking',
+        content: 'Decision‑making under uncertainty, long‑horizon compounding, and the limits of backtests.',
       },
     ],
   },
 
   // Social links
   links: {
-    email: 'hello@example.com',
-    twitter: 'https://twitter.com/yourusername',
-    github: 'https://github.com/yourusername',
-    linkedin: 'https://linkedin.com/in/yourusername',
+    email: 'dtopeninbox@gmail.com',
+    twitter: 'https://x.com/tenreirodaniel',
+    github: 'https://github.com/dtenreiro',
+    linkedin: 'https://linkedin.com/in/dantenreiro',
     // Add more links as needed
   },
 
   // All links for the links page
   allLinks: [
-    { name: 'Email', url: 'mailto:hello@example.com', description: 'Get in touch' },
+    { name: 'Email', url: 'mailto:dtopeninbox@gmail.com', description: 'Get in touch' },
     {
       name: 'Twitter / X',
-      url: 'https://twitter.com/yourusername',
-      description: 'Thoughts and updates',
+      url: 'https://x.com/tenreirodaniel',
+      description: 'Notes on markets + research',
     },
-    { name: 'GitHub', url: 'https://github.com/yourusername', description: 'Open source projects' },
+    { name: 'GitHub', url: 'https://github.com/dtenreiro', description: 'Code and experiments' },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/yourusername',
+      url: 'https://linkedin.com/in/dantenreiro',
       description: 'Professional profile',
     },
-    { name: 'Blog', url: '/blog', description: 'Writing and articles' },
+    { name: 'Blog', url: '/blog', description: 'Writing' },
     // Add more links as needed
   ],
 

@@ -5,20 +5,35 @@ export default function HomePage() {
   return (
     <article className="space-y-12">
       {/* Intro */}
-      <header className="space-y-4">
-        <h1 className="text-3xl font-bold tracking-tight md:text-4xl">{siteConfig.name}</h1>
-        <p className="text-muted-foreground text-lg">
-          {siteConfig.title} &mdash; {siteConfig.location}
+      <header className="space-y-6">
+        <div className="space-y-2">
+          <h1 className="text-3xl font-bold tracking-tight md:text-4xl">{siteConfig.name}</h1>
+          <p className="text-muted-foreground flex items-center gap-2">
+            <span className="text-primary">/</span> {siteConfig.location}
+          </p>
+        </div>
+
+        <p className="text-xl md:text-2xl leading-tight">
+          <span className="font-bold">Investor & researcher</span> — building AI-native systems for public‑market trading.
         </p>
       </header>
 
       {/* Bio */}
-      <section className="prose">
-        {siteConfig.fullBio.split('\n\n').map((paragraph, index) => (
-          <p key={index} className="text-foreground">
-            {paragraph}
-          </p>
-        ))}
+      <section className="prose prose-neutral dark:prose-invert max-w-none">
+        {siteConfig.fullBio.split('\n\n').map((paragraph, index) => {
+          // Simple bold replacement for the bio
+          const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+          return (
+            <p key={index} className="text-foreground leading-relaxed">
+              {parts.map((part, i) => {
+                if (part.startsWith('**') && part.endsWith('**')) {
+                  return <strong key={i}>{part.slice(2, -2)}</strong>;
+                }
+                return part;
+              })}
+            </p>
+          );
+        })}
       </section>
 
       {/* Experience */}
@@ -30,14 +45,18 @@ export default function HomePage() {
               <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                 <h3 className="font-medium">
                   {job.title} at{' '}
-                  <a
-                    href={job.companyUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline underline-offset-2 hover:opacity-80"
-                  >
-                    {job.company}
-                  </a>
+                  {job.companyUrl ? (
+                    <a
+                      href={job.companyUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 hover:opacity-80"
+                    >
+                      {job.company}
+                    </a>
+                  ) : (
+                    <span>{job.company}</span>
+                  )}
                 </h3>
                 <span className="text-muted-foreground text-sm">{job.period}</span>
               </div>

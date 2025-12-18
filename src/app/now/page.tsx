@@ -12,11 +12,14 @@ export default function NowPage() {
       {/* Header */}
       <header className="space-y-4">
         <h1 className="text-3xl font-bold tracking-tight">Now</h1>
-        <p className="text-muted-foreground">
-          What I&apos;m focused on at this point in my life.
-          <br />
-          <span className="text-sm">Last updated: {siteConfig.now.updated}</span>
-        </p>
+        <div className="space-y-1">
+          <p className="font-medium text-lg">
+            What I&apos;m focused on at this point in my life.
+          </p>
+          <p className="text-muted-foreground text-sm">
+            Last updated: {siteConfig.now.updated}
+          </p>
+        </div>
       </header>
 
       {/* Sections */}

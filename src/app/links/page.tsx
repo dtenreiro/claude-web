@@ -57,8 +57,7 @@ export default function LinksPage() {
         <div className="space-y-4">
           <h2 className="text-xl font-semibold">Get in touch</h2>
           <p className="text-muted-foreground">
-            Feel free to reach out if you want to chat about technology, collaboration
-            opportunities, or just to say hello.
+            Feel free to reach out if you want to talk markets, AI infrastructure, or potential collaboration.
           </p>
           <a
             href={`mailto:${siteConfig.links.email}`}
