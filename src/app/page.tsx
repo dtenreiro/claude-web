@@ -4,22 +4,22 @@ export default function HomePage() {
   return (
     <article className="space-y-24">
       {/* Intro */}
-      <header className="space-y-6">
+      <header className="space-y-6 py-8">
         <div className="space-y-2">
-          <h1 className="text-3xl font-bold tracking-tight md:text-4xl">{siteConfig.name}</h1>
-          <div className="flex flex-wrap items-center gap-x-2 text-muted-foreground">
+          {/* <h1 className="text-3xl font-bold tracking-tight md:text-4xl">{siteConfig.name}</h1> */}
+          {/* <div className="flex flex-wrap items-center gap-x-2 text-muted-foreground">
             <span className="text-foreground font-medium">{siteConfig.title}</span>
             <span aria-hidden="true">/</span>
             <span>{siteConfig.location}</span>
-          </div>
+          </div> */}
         </div>
-        <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
+        {/* <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
           {siteConfig.tagline}
-        </p>
+        </p> */}
       </header>
 
       {/* Bio */}
-      <section className="prose prose-neutral dark:prose-invert max-w-none">
+      <section className="prose prose-neutral dark:prose-invert max-w-none py-8">
         {siteConfig.fullBio.split('\n\n').map((paragraph, index) => {
           // Simple bold replacement for the bio
           const parts = paragraph.split(/(\*\*.*?\*\*)/g);
@@ -37,7 +37,7 @@ export default function HomePage() {
       </section>
 
       {/* Experience */}
-      <section className="space-y-6">
+      <section className="space-y-6 py-8">
         <h2 className="text-xl font-semibold tracking-tight">Experience</h2>
         <div className="space-y-8">
           {siteConfig.experience.map((job, index) => (
@@ -67,7 +67,7 @@ export default function HomePage() {
       </section>
 
       {/* Education */}
-      <section className="space-y-6">
+      <section className="space-y-6 py-8">
         <h2 className="text-xl font-semibold tracking-tight">Education</h2>
         <div className="space-y-8">
           <div className="space-y-1">
