@@ -10,7 +10,7 @@ export const siteConfig = {
   siteUrl: "https://yoursite.com",
 
   // Bio (used on home page)
-  shortBio: "I'm an investor, writer, and researcher developing AI systems that enhance public-market trading strategies as managing partner of Autoencoder Holdings.",
+  shortBio: "I am an investor, writer, and researcher developing AI systems that enhance public-market trading strategies as managing partner of Autoencoder Holdings.",
 
   // Extended bio (used on about page)
   fullBio: `I am an investor, writer, and researcher developing AI systems that enhance public-market trading strategies as managing partner of Autoencoder Holdings.
