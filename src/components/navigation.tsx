@@ -9,11 +9,11 @@ export function Navigation() {
 
   return (
     <header className="bg-background/80 border-border sticky top-0 z-50 flex justify-center border-b backdrop-blur-sm">
-      <nav className="w-full max-w-2xl px-6 py-6 md:py-8">
+      <nav className="w-full max-w-3xl px-6 py-6 md:py-8 lg:py-10">
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className="text-foreground hover:text-muted-foreground font-semibold transition-colors"
+            className="text-foreground hover:text-muted-foreground font-semibold transition-colors rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)]"
           >
             {siteConfig.name}
           </Link>
@@ -22,7 +22,7 @@ export function Navigation() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`text-sm transition-colors ${pathname === item.href
+                  className={`text-sm transition-colors rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)] focus-visible:text-foreground ${pathname === item.href
                     ? 'text-foreground'
                     : 'text-muted-foreground hover:text-foreground'
                     }`}

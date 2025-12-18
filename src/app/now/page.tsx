@@ -11,7 +11,7 @@ export default function NowPage() {
     <article className="space-y-20">
       {/* Header */}
       <header className="space-y-4">
-        <h1 className="text-3xl font-bold tracking-tight">Now</h1>
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Now</h1>
         <div className="space-y-1">
           <p className="font-medium text-lg">
             What I&apos;m focused on at this point in my life.
@@ -40,7 +40,7 @@ export default function NowPage() {
             href="https://nownownow.com/about"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:opacity-80"
+            className="underline underline-offset-2 hover:opacity-80 rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)]"
           >
             now page
           </a>
