@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "format": "prettier --write ."
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md,mdx,json}\" \"*.{js,jsx,ts,tsx,css,md,mdx,json}\""
   },
   "dependencies": {
     "next": "16.0.10",
