@@ -27,7 +27,7 @@ export default function LinksPage() {
               className="group border-border hover:bg-muted/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)] flex items-center justify-between rounded-xl border p-5 transition-all hover:shadow-sm"
             >
               <div className="space-y-1.5">
-                <h2 className="font-semibold tracking-tight transition-colors group-hover:text-foreground group-focus-visible:text-foreground">
+                <h2 className="pt-4 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4 transition-colors group-hover:text-foreground group-focus-visible:text-foreground">
                   {link.name}
                 </h2>
                 <p className="text-muted-foreground text-sm leading-relaxed">{link.description}</p>

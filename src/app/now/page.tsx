@@ -26,7 +26,7 @@ export default function NowPage() {
       <div className="space-y-20">
         {siteConfig.now.sections.map((section, index) => (
           <section key={index} className="space-y-6">
-            <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">{section.title}</h2>
+            <h2 className="pt-4 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">{section.title}</h2>
             <p className="text-lg text-foreground leading-relaxed max-w-4xl">{section.content}</p>
           </section>
         ))}

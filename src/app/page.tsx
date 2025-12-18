@@ -9,22 +9,24 @@ export default function HomePage() {
       </header>
 
       <article className="space-y-24 md:space-y-32 lg:space-y-40">
-        {/* Bio */}
-        <section className="prose prose-neutral dark:prose-invert max-w-none">
-          {siteConfig.fullBio.split('\n\n').map((paragraph, index) => {
-            // Simple bold replacement for the bio
-            const parts = paragraph.split(/(\*\*.*?\*\*)/g);
-            return (
-              <p key={index} className="text-foreground leading-relaxed">
-                {parts.map((part, i) => {
-                  if (part.startsWith('**') && part.endsWith('**')) {
-                    return <strong key={i} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>;
-                  }
-                  return part;
-                })}
-              </p>
-            );
-          })}
+        <section className="space-y-16">
+          <h2 className="pt-4 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">Bio</h2>
+          <div className="prose prose-neutral dark:prose-invert max-w-none">
+            {siteConfig.fullBio.split('\n\n').map((paragraph, index) => {
+              // Simple bold replacement for the bio
+              const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+              return (
+                <p key={index} className="text-foreground leading-relaxed">
+                  {parts.map((part, i) => {
+                    if (part.startsWith('**') && part.endsWith('**')) {
+                      return <strong key={i} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>;
+                    }
+                    return part;
+                  })}
+                </p>
+              );
+            })}
+          </div>
         </section>
 
         {/* Experience */}
@@ -57,8 +59,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Education */}
-        <section className="space-y-16">
+        <section className="space-y-16 pt-12 md:pt-16">
           <h2 className="pt-6 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">Education</h2>
           <div className="space-y-16">
             <div className="space-y-1">
