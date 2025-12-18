@@ -31,7 +31,7 @@ He is a native of New York City and attended **Regis High School** (2015) and **
       company: 'Autoencoder Holdings',
       companyUrl: 'https://autoencoderholdings.com',
       period: '2023 - Present',
-      description: 'Developing AI-native research and trading infrastructure across the full investment lifecycle: data acquisition, model development, portfolio construction, and execution.',
+      description: 'Developing AI‑native research and trading infrastructure across the full investment lifecycle: data acquisition, model development, portfolio construction, and execution.',
     },
     {
       title: 'Research Fellow',
