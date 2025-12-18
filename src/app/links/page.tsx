@@ -51,22 +51,6 @@ export default function LinksPage() {
           ))}
         </div>
       </section>
-
-      {/* Contact CTA */}
-      <section className="border-border border-t pt-8">
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Get in touch</h2>
-          <p className="text-muted-foreground">
-            Feel free to reach out if you want to talk markets, AI infrastructure, or potential collaboration.
-          </p>
-          <a
-            href={`mailto:${siteConfig.links.email}`}
-            className="bg-accent text-accent-foreground inline-flex items-center rounded-md px-4 py-2 text-sm font-medium transition-opacity hover:opacity-90"
-          >
-            Send an email
-          </a>
-        </div>
-      </section>
     </article>
   );
 }
