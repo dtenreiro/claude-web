@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import { Navigation } from "@/components/navigation";
-import { Footer } from "@/components/footer";
-import { siteConfig } from "@/lib/config";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Navigation } from '@/components/navigation';
+import { Footer } from '@/components/footer';
+import { siteConfig } from '@/lib/config';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: {
@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     description: siteConfig.tagline,
     url: siteConfig.siteUrl,
     siteName: siteConfig.name,
-    locale: "en_US",
-    type: "website",
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.tagline,
   },
@@ -36,12 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="antialiased min-h-screen flex flex-col">
+      <body className="flex min-h-screen flex-col antialiased">
         <Navigation />
-        <main className="flex-1 w-full flex flex-col items-center">
-          <div className="max-w-2xl w-full px-6 py-16 md:py-24">
-            {children}
-          </div>
+        <main className="flex w-full flex-1 flex-col items-center">
+          <div className="w-full max-w-2xl px-6 py-16 md:py-24">{children}</div>
         </main>
         <Footer />
       </body>
