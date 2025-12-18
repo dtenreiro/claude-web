@@ -13,9 +13,6 @@ export default function HomePage() {
           </p>
         </div>
 
-        <p className="text-xl md:text-2xl leading-tight">
-          <span className="font-bold">Investor & researcher</span> — building AI-native systems for public‑market trading.
-        </p>
       </header>
 
       {/* Bio */}
@@ -74,15 +71,6 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* CTA */}
-      <div className="flex flex-wrap gap-4 pt-4">
-        <Link
-          href="/links"
-          className="bg-accent text-accent-foreground inline-flex items-center rounded-md px-4 py-2 text-sm font-medium transition-opacity hover:opacity-90"
-        >
-          Get in touch
-        </Link>
-      </div>
     </article>
   );
 }
