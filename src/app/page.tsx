@@ -28,8 +28,8 @@ export default function HomePage() {
         </section>
 
         {/* Experience */}
-        <section className="space-y-12">
-          <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">Experience</h2>
+        <section className="space-y-16">
+          <h2 className="pt-4 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">Experience</h2>
           <div className="space-y-16">
             {siteConfig.experience.map((job, index) => (
               <div key={index} className="space-y-2">
@@ -58,9 +58,9 @@ export default function HomePage() {
         </section>
 
         {/* Education */}
-        <section className="space-y-12">
-          <h2 className="text-xs font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">Education</h2>
-          <div className="space-y-12">
+        <section className="space-y-16">
+          <h2 className="pt-6 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">Education</h2>
+          <div className="space-y-16">
             <div className="space-y-1">
               <div className="flex items-baseline justify-between">
                 <h3 className="font-medium text-foreground">Yale University</h3>
