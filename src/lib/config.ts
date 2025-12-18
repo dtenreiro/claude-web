@@ -50,7 +50,7 @@ I'm passionate about building products that make a real difference in people's l
 
   // Now page content
   now: {
-    updated: "December 2024",
+    updated: "December 2025",
     sections: [
       {
         title: "Working",
