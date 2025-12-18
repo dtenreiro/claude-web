@@ -32,7 +32,7 @@ I grew up in New York City and attended **Regis High School** (2015) before stud
       title: 'Managing Partner',
       company: 'Autoencoder Holdings',
       companyUrl: 'https://autoencoderholdings.com',
-      period: '2023 - Present',
+      period: '2023 - Pres.',
       description: 'Building AI‑native research and trading infrastructure: data → models → portfolios → execution.',
     },
     {
