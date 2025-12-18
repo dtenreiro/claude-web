@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Daniel Tenreiro",
   title: "Your Title",
   tagline: "A brief tagline about yourself",
-  location: "City, Country",
+  location: "New York, USA",
 
   // URLs
   siteUrl: "https://yoursite.com",
