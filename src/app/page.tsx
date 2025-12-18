@@ -3,11 +3,6 @@ import { siteConfig } from '@/lib/config';
 export default function HomePage() {
   return (
     <>
-      {/* Header */}
-      <header className="mb-24 md:mb-32">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">{siteConfig.name}</h1>
-      </header>
-
       <article className="space-y-24 md:space-y-32 lg:space-y-40">
         <section className="space-y-16">
           <h2 className="pt-4 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">Bio</h2>
