@@ -1,13 +1,15 @@
-import { siteConfig } from "@/lib/config";
+import { siteConfig } from '@/lib/config';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border flex justify-center">
-      <div className="max-w-2xl w-full px-6 py-8">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>&copy; {currentYear} {siteConfig.name}</p>
+    <footer className="border-border flex justify-center border-t">
+      <div className="w-full max-w-2xl px-6 py-8">
+        <div className="text-muted-foreground flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
+          <p>
+            &copy; {currentYear} {siteConfig.name}
+          </p>
           <div className="flex items-center gap-4">
             {siteConfig.links.twitter && (
               <a

@@ -45,6 +45,16 @@ npm run build
 
 Generates a static export in the `out` directory.
 
+### Linting & Formatting
+
+```bash
+# Run ESLint
+npm run lint
+
+# Run Prettier
+npm run format
+```
+
 ## Customization
 
 All personal content is centralized in `src/lib/config.ts`. Update this file to personalize your site:
@@ -84,9 +94,9 @@ To use a custom domain, update `next.config.ts`:
 
 ```typescript
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "", // Remove basePath for custom domain
-  assetPrefix: "",
+  output: 'export',
+  basePath: '', // Remove basePath for custom domain
+  assetPrefix: '',
   // ...
 };
 ```
