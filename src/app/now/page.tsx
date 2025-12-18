@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
+import { articleSpacingClasses, focusRingClasses } from '@/lib/styles';
+import { SectionHeader } from '@/components/section-header';
 
 export const metadata: Metadata = {
   title: 'Now',
@@ -8,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function NowPage() {
   return (
-    <article className="space-y-24 md:space-y-32">
+    <article className={articleSpacingClasses}>
       {/* Header */}
       <header className="space-y-6">
         <h1 className="text-5xl md:text-6xl font-bold tracking-tight">Now</h1>
@@ -26,7 +28,7 @@ export default function NowPage() {
       <div className="space-y-20">
         {siteConfig.now.sections.map((section, index) => (
           <section key={index} className="space-y-6">
-            <h2 className="pt-4 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">{section.title}</h2>
+            <SectionHeader title={section.title} />
             <p className="text-lg text-foreground leading-relaxed max-w-4xl">{section.content}</p>
           </section>
         ))}
@@ -40,7 +42,7 @@ export default function NowPage() {
             href="https://nownownow.com/about"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:opacity-80 rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)]"
+            className={`underline underline-offset-2 hover:opacity-80 rounded-md ${focusRingClasses}`}
           >
             now page
           </a>
