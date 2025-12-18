@@ -1,7 +1,7 @@
 // Personal configuration - Update this file with your information
 export const siteConfig = {
   // Basic Info
-  name: "Your Name",
+  name: "Daniel Tenreiro",
   title: "Your Title",
   tagline: "A brief tagline about yourself",
   location: "City, Country",
