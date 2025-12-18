@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
 import { articleSpacingClasses, focusRingClasses } from '@/lib/styles';
+import { SectionHeader } from '@/components/section-header';
 
 export const metadata: Metadata = {
   title: 'Links',
@@ -20,6 +21,7 @@ export default function LinksPage() {
 
       {/* Links Grid */}
       <section className="space-y-8">
+        <SectionHeader title="Connect" />
         <div className="grid gap-4 sm:grid-cols-2">
           {siteConfig.allLinks.map((link, index) => {
             const isExternal = link.url.startsWith('http');
@@ -32,9 +34,9 @@ export default function LinksPage() {
                 className={`group border-border hover:bg-muted/50 ${focusRingClasses} flex items-center justify-between rounded-xl border p-5 transition-all hover:shadow-sm`}
               >
                 <div className="space-y-1.5">
-                  <h2 className="text-lg font-semibold text-foreground/80 transition-colors group-hover:text-foreground group-focus-visible:text-foreground">
+                  <h3 className="text-lg font-semibold text-foreground/80 transition-colors group-hover:text-foreground group-focus-visible:text-foreground">
                     {link.name}
-                  </h2>
+                  </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{link.description}</p>
                 </div>
                 <div className="bg-muted group-hover:bg-background group-focus-visible:bg-background flex h-8 w-8 items-center justify-center rounded-full transition-colors">

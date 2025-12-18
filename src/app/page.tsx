@@ -1,9 +1,15 @@
+import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
 import { articleSpacingClasses } from '@/lib/styles';
 import { renderBioParagraphs } from '@/lib/markdown';
 import { SectionHeader } from '@/components/section-header';
 import { ExperienceItem } from '@/components/experience-item';
 import { EducationItem } from '@/components/education-item';
+
+export const metadata: Metadata = {
+  title: 'Home',
+  description: siteConfig.shortBio,
+};
 
 export default function HomePage() {
   return (
