@@ -38,8 +38,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="antialiased min-h-screen flex flex-col">
         <Navigation />
-        <main className="flex-1 max-w-2xl mx-auto px-6 py-16 md:py-24 w-full">
-          {children}
+        <main className="flex-1 w-full">
+          <div className="max-w-2xl mx-auto px-6 py-16 md:py-24">
+            {children}
+          </div>
         </main>
         <Footer />
       </body>
