@@ -1,75 +1,43 @@
 import { siteConfig } from '@/lib/config';
+import { articleSpacingClasses } from '@/lib/styles';
+import { renderBioParagraphs } from '@/lib/markdown';
+import { SectionHeader } from '@/components/section-header';
+import { ExperienceItem } from '@/components/experience-item';
+import { EducationItem } from '@/components/education-item';
 
 export default function HomePage() {
   return (
     <>
-      <article className="space-y-24 md:space-y-32 lg:space-y-40">
+      <article className={articleSpacingClasses}>
         <section className="space-y-16">
-          <h2 className="pt-4 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">Bio</h2>
+          <SectionHeader title="Bio" />
           <div className="prose prose-neutral dark:prose-invert max-w-none">
-            {siteConfig.fullBio.split('\n\n').map((paragraph, index) => {
-              // Simple bold replacement for the bio
-              const parts = paragraph.split(/(\*\*.*?\*\*)/g);
-              return (
-                <p key={index} className="text-foreground leading-relaxed">
-                  {parts.map((part, i) => {
-                    if (part.startsWith('**') && part.endsWith('**')) {
-                      return <strong key={i} className="font-semibold text-foreground">{part.slice(2, -2)}</strong>;
-                    }
-                    return part;
-                  })}
-                </p>
-              );
-            })}
+            {renderBioParagraphs(siteConfig.fullBio)}
           </div>
         </section>
 
         {/* Experience */}
         <section className="space-y-16">
-          <h2 className="pt-4 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">Experience</h2>
+          <SectionHeader title="Experience" />
           <div className="space-y-16">
             {siteConfig.experience.map((job, index) => (
-              <div key={index} className="space-y-2">
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="font-medium text-foreground">
-                    {job.title} at{' '}
-                    {job.companyUrl ? (
-                      <a
-                        href={job.companyUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline decoration-muted-foreground/50 underline-offset-4 hover:decoration-foreground transition-colors"
-                      >
-                        {job.company}
-                      </a>
-                    ) : (
-                      <span>{job.company}</span>
-                    )}
-                  </h3>
-                  <span className="text-sm text-muted-foreground tabular-nums">{job.period}</span>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">{job.description}</p>
-              </div>
+              <ExperienceItem
+                key={index}
+                title={job.title}
+                company={job.company}
+                companyUrl={job.companyUrl || undefined}
+                period={job.period}
+                description={job.description}
+              />
             ))}
           </div>
         </section>
 
         <section className="space-y-16 pt-12 md:pt-16">
-          <h2 className="pt-6 text-lg font-bold tracking-[0.2em] uppercase text-muted-foreground/60 border-b border-border pb-4">Education</h2>
+          <SectionHeader title="Education" className="pt-6" />
           <div className="space-y-16">
-            <div className="space-y-1">
-              <div className="flex items-baseline justify-between">
-                <h3 className="font-medium text-foreground">Yale University</h3>
-                <span className="text-sm text-muted-foreground tabular-nums">2019</span>
-              </div>
-              <p className="text-muted-foreground">B.A. Economics</p>
-            </div>
-            <div className="space-y-1">
-              <div className="flex items-baseline justify-between">
-                <h3 className="font-medium text-foreground">Regis High School</h3>
-                <span className="text-sm text-muted-foreground tabular-nums">2015</span>
-              </div>
-            </div>
+            <EducationItem institution="Yale University" year="2019" degree="B.A. Economics" />
+            <EducationItem institution="Regis High School" year="2015" />
           </div>
         </section>
       </article>

@@ -1,46 +1,29 @@
 import { siteConfig } from '@/lib/config';
+import { containerClasses } from '@/lib/styles';
+import { ExternalLink } from '@/components/external-link';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const socialLinks = [
+    { name: 'Twitter', url: siteConfig.links.twitter },
+    { name: 'GitHub', url: siteConfig.links.github },
+    { name: 'LinkedIn', url: siteConfig.links.linkedin },
+  ].filter((link) => link.url);
+
   return (
     <footer className="border-border flex justify-center border-t">
-      <div className="w-[90%] max-w-6xl py-16 md:py-24 lg:py-32">
+      <div className={`${containerClasses} py-16 md:py-24 lg:py-32`}>
         <div className="text-muted-foreground flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
           <p>
             &copy; {currentYear} {siteConfig.name}
           </p>
           <div className="flex items-center gap-4">
-            {siteConfig.links.twitter && (
-              <a
-                href={siteConfig.links.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-foreground transition-colors rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)]"
-              >
-                Twitter
-              </a>
-            )}
-            {siteConfig.links.github && (
-              <a
-                href={siteConfig.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-foreground transition-colors rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)]"
-              >
-                GitHub
-              </a>
-            )}
-            {siteConfig.links.linkedin && (
-              <a
-                href={siteConfig.links.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-foreground transition-colors rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--accent)]"
-              >
-                LinkedIn
-              </a>
-            )}
+            {socialLinks.map((link) => (
+              <ExternalLink key={link.name} href={link.url!}>
+                {link.name}
+              </ExternalLink>
+            ))}
           </div>
         </div>
       </div>

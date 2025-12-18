@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { siteConfig } from '@/lib/config';
+import { containerClasses } from '@/lib/styles';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -39,7 +40,7 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col antialiased">
         <Navigation />
         <main className="flex w-full flex-1 flex-col items-center">
-          <div className="w-[90%] max-w-6xl px-4 py-20 md:py-32 lg:py-40">{children}</div>
+          <div className={`${containerClasses} px-4 py-20 md:py-32 lg:py-40`}>{children}</div>
         </main>
         <Footer />
       </body>
