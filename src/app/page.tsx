@@ -3,8 +3,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="max-w-2xl mx-auto px-6 py-16 md:py-24">
-      <article className="space-y-12">
+    <article className="space-y-12">
         {/* Intro */}
         <header className="space-y-4">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
@@ -69,7 +68,6 @@ export default function HomePage() {
             Get in touch
           </Link>
         </div>
-      </article>
-    </div>
+    </article>
   );
 }
