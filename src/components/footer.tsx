@@ -4,8 +4,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border">
-      <div className="max-w-2xl mx-auto px-6 py-8">
+    <footer className="border-t border-border flex justify-center">
+      <div className="max-w-2xl w-full px-6 py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>&copy; {currentYear} {siteConfig.name}</p>
           <div className="flex items-center gap-4">
