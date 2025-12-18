@@ -14,7 +14,7 @@ export default function ProjectsPage() {
         <article className={articleSpacingClasses}>
             {/* Header */}
             <header className="space-y-6">
-                <h1 className="text-5xl py-4 md:text-6xl font-bold tracking-tight leading-tight">Projects</h1>
+                <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">Projects</h1>
                 <p className="text-xl md:text-2xl py-2 text-muted-foreground font-light leading-relaxed">
                     Things I&apos;ve built or explored recently.
                 </p>
