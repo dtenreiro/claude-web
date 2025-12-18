@@ -2,49 +2,60 @@
 export const siteConfig = {
   // Basic Info
   name: "Daniel Tenreiro",
-  title: "Your Title",
-  tagline: "A brief tagline about yourself",
+  title: "Investor, Writer & Researcher",
+  tagline: "Developing AI systems that enhance public-market trading strategies",
   location: "New York, USA",
 
   // URLs
   siteUrl: "https://yoursite.com",
 
   // Bio (used on home page)
-  shortBio: "I'm a software engineer and product builder. I create tools that help people work and live better.",
+  shortBio: "I am an investor, writer, and researcher developing AI systems that enhance public-market trading strategies as managing partner of Autoencoder Holdings.",
 
   // Extended bio (used on about page)
-  fullBio: `I'm a software engineer and product builder based in [Your City]. I create tools that help people work and live better, constantly exploring new ways to interact with technology.
+  fullBio: `I am an investor, writer, and researcher developing AI systems that enhance public-market trading strategies as managing partner of Autoencoder Holdings.
 
-I'm passionate about building products that make a real difference in people's lives. My focus is on creating intuitive, well-crafted solutions that solve genuine problems.`,
+I previously worked as a research fellow at Thiel Macro, a global macro hedge fund in Los Angeles. Prior to that I worked at a NYC-based long/short equity fund after starting my career at National Review, where I covered finance and economics as a writer and editor. My writing has appeared in National Review, City Journal, and The Spectator, among other publications.
+
+I grew up in New York City and attended Regis High School (2015) before studying economics at Yale University (2019).
+
+I post regularly on Twitter and am reachable at the email icon linked to the left. Please get in touch — I have met great friends and collaborators online.`,
 
   // Current work
-  currentRole: "Software Engineer",
-  currentCompany: "Your Company",
-  currentCompanyUrl: "https://yourcompany.com",
-  currentDescription: "Building tools and products that help people be more productive.",
+  currentRole: "Managing Partner",
+  currentCompany: "Autoencoder Holdings",
+  currentCompanyUrl: "https://autoencoder.com",
+  currentDescription: "Developing AI systems that enhance public-market trading strategies.",
 
   // Experience
   experience: [
     {
-      title: "Software Engineer",
-      company: "Current Company",
-      companyUrl: "https://example.com",
-      period: "2023 - Present",
-      description: "Building innovative products and features.",
+      title: "Managing Partner",
+      company: "Autoencoder Holdings",
+      companyUrl: "https://autoencoder.com",
+      period: "Present",
+      description: "Developing AI systems that enhance public-market trading strategies.",
     },
     {
-      title: "Senior Developer",
-      company: "Previous Company",
-      companyUrl: "https://example.com",
-      period: "2020 - 2023",
-      description: "Led development of key platform features.",
+      title: "Research Fellow",
+      company: "Thiel Macro",
+      companyUrl: "https://thielmacro.com",
+      period: "Previous",
+      description: "Global macro hedge fund research in Los Angeles.",
     },
     {
-      title: "Developer",
-      company: "Earlier Company",
-      companyUrl: "https://example.com",
-      period: "2018 - 2020",
-      description: "Full-stack development and system design.",
+      title: "Analyst",
+      company: "Long/Short Equity Fund",
+      companyUrl: "#",
+      period: "Previous",
+      description: "NYC-based long/short equity fund.",
+    },
+    {
+      title: "Writer & Editor",
+      company: "National Review",
+      companyUrl: "https://nationalreview.com",
+      period: "Previous",
+      description: "Covered finance and economics. Writing also appeared in City Journal and The Spectator.",
     },
   ],
 
@@ -54,15 +65,15 @@ I'm passionate about building products that make a real difference in people's l
     sections: [
       {
         title: "Working",
-        content: "Currently focused on building AI-powered tools and applications. Exploring new paradigms for human-computer interaction.",
+        content: "Developing AI systems that enhance public-market trading strategies at Autoencoder Holdings.",
       },
       {
-        title: "Learning",
-        content: "Diving deeper into machine learning, distributed systems, and product design. Always reading and experimenting with new technologies.",
+        title: "Writing",
+        content: "Writing about finance, economics, and markets. My work has appeared in National Review, City Journal, and The Spectator.",
       },
       {
         title: "Living",
-        content: "Based in [Your City]. Enjoying fitness, photography, and traveling when possible.",
+        content: "Based in New York City. Regis High School (2015), Yale University (2019).",
       },
     ],
   },

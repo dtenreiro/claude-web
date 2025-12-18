@@ -55,11 +55,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Interests */}
+        {/* Education */}
         <section className="space-y-4">
-          <h2 className="text-xl font-semibold">Interests</h2>
+          <h2 className="text-xl font-semibold">Education</h2>
           <p className="text-muted-foreground">
-            I love fitness, technology, photography, travel, and the oxford comma.
+            Yale University, Economics (2019) &bull; Regis High School (2015)
           </p>
         </section>
       </article>
