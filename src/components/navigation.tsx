@@ -8,8 +8,8 @@ export function Navigation() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
-      <nav className="max-w-2xl mx-auto px-6 py-4">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border flex justify-center">
+      <nav className="max-w-2xl w-full px-6 py-4">
         <div className="flex items-center justify-between">
           <Link
             href="/"
@@ -22,11 +22,10 @@ export function Navigation() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`text-sm transition-colors ${
-                    pathname === item.href
+                  className={`text-sm transition-colors ${pathname === item.href
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </Link>
