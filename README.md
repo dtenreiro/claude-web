@@ -90,16 +90,24 @@ The site will be available at `https://yourusername.github.io/claude-web/`
 
 ### Custom Domain
 
-To use a custom domain, update `next.config.ts`:
+To use a custom domain:
+
+1. Add a `CNAME` file to the `public/` directory with your domain
+2. Update `next.config.ts` to remove the basePath:
 
 ```typescript
 const nextConfig: NextConfig = {
   output: 'export',
   basePath: '', // Remove basePath for custom domain
   assetPrefix: '',
-  // ...
+  images: {
+    unoptimized: true,
+  },
+  trailingSlash: true,
 };
 ```
+
+3. Configure your DNS provider to point to GitHub Pages
 
 ## Project Structure
 

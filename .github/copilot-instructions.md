@@ -14,7 +14,7 @@
 - **Metadata**: Route metadata should be declared via `export const metadata` (see [src/app/about/page.tsx](src/app/about/page.tsx), [src/app/links/page.tsx](src/app/links/page.tsx), [src/app/now/page.tsx](src/app/now/page.tsx)). Keep descriptions in sync with `siteConfig.tagline` where relevant.
 - **Accessibility**: Links opening in new tabs include `rel="noopener noreferrer"`; keep that convention. The site relies on semantic HTML headings and paragraph tags; maintain heading hierarchy.
 - **Routing**: Navigation uses exact pathname match; ensure new routes use stable `href` strings in `siteConfig.navigation` that match folder names under `src/app`.
-- **Deployment**: No custom Next config; default `next.config.ts` is empty. Assume Vercel-style deployment unless specified otherwise.
+- **Deployment**: Configured for GitHub Pages via GitHub Actions (see [.github/workflows/deploy.yml](.github/workflows/deploy.yml)). [next.config.ts](next.config.ts) includes `basePath: '/claude-web'` for production, `output: 'export'` for static export, and `images.unoptimized: true`. The workflow builds on push to `main` and uploads to GitHub Pages.
 - **Common tasks**:
   - Update personal info: edit [src/lib/config.ts](src/lib/config.ts) and let pages render automatically.
   - Add a new page: create `src/app/<route>/page.tsx`, add metadata, and add the route to `siteConfig.navigation`.
