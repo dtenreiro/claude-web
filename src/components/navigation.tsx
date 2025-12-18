@@ -9,7 +9,7 @@ export function Navigation() {
 
   return (
     <header className="bg-background/80 border-border sticky top-0 z-50 flex justify-center border-b backdrop-blur-sm">
-      <nav className="w-[90%] max-w-6xl py-8 md:py-10 lg:py-12">
+      <nav className="w-[90%] max-w-6xl py-12 md:py-14 lg:py-16">
         <div className="flex items-center justify-between">
           <Link
             href="/"
