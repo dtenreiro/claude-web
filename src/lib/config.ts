@@ -106,10 +106,25 @@ He is a native of New York City and attended **Regis High School** (2015) and **
     // Add more links as needed
   ],
 
+  // Projects (used on Projects page)
+  projects: [
+    {
+      name: 'Macro Regime Detector',
+      url: 'https://github.com/dtenreiro/macro-regime-detector',
+      description: 'Unsupervised clustering of market regimes with HMM + PCA.',
+    },
+    {
+      name: 'Alpha Pipeline Sandbox',
+      url: 'https://github.com/dtenreiro/alpha-pipeline',
+      description: 'Experimentation harness for factors, validation, and portfolio combos.',
+    },
+  ],
+
   // Navigation
   navigation: [
     { name: 'Home', href: '/' },
     { name: 'Now', href: '/now' },
+    { name: 'Projects', href: '/projects' },
     { name: 'Links', href: '/links' },
   ],
 };
