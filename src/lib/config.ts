@@ -11,7 +11,7 @@ export const siteConfig = {
 
   // Bio (used on home page)
   shortBio:
-    'Investor & researcher — developing AI systems for public‑market trading.',
+    'Investor & researcher.',
 
   // Extended bio (used on about page)
   fullBio: `I am an investor, writer, and researcher developing AI systems that enhance public‑market trading strategies as managing partner of **Autoencoder Holdings**.
@@ -32,28 +32,28 @@ I grew up in New York City and attended **Regis High School** (2015) before stud
       title: 'Managing Partner',
       company: 'Autoencoder Holdings',
       companyUrl: 'https://autoencoderholdings.com',
-      period: 'Present',
+      period: '2023 - Present',
       description: 'Building AI‑native research and trading infrastructure: data → models → portfolios → execution.',
     },
     {
       title: 'Research Fellow',
       company: 'Thiel Macro',
       companyUrl: '',
-      period: 'Previous',
+      period: '2021 - 2023',
       description: 'Global macro research with an emphasis on regime shifts, positioning, and risk.',
     },
     {
       title: 'Analyst',
       company: 'Long/Short Equity Fund',
       companyUrl: '',
-      period: 'Previous',
+      period: '2020 - 2021',
       description: 'Fundamental + systematic research, position sizing, and portfolio risk management.',
     },
     {
       title: 'Writer & Editor',
       company: 'National Review',
       companyUrl: 'https://nationalreview.com',
-      period: 'Previous',
+      period: '2019 - 2021',
       description:
         'Covered finance and economics; essays also published in National Review, City Journal, and The Spectator.',
     },
