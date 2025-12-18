@@ -2,7 +2,7 @@ import { siteConfig } from '@/lib/config';
 
 export default function HomePage() {
   return (
-    <article className="space-y-16">
+    <article className="space-y-24">
       {/* Intro */}
       <header className="space-y-6">
         <div className="space-y-2">
