@@ -1,6 +1,11 @@
 import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
-import { articleSpacingClasses, sectionSpacingClasses } from '@/lib/styles';
+import {
+  articleSpacingClasses,
+  sectionSpacingClasses,
+  pageTitleClasses,
+  pageSubtitleClasses,
+} from '@/lib/styles';
 import { SectionHeader } from '@/components/section-header';
 import { LinkCard } from '@/components/link-card';
 
@@ -14,10 +19,8 @@ export default function LinksPage() {
     <article className={articleSpacingClasses}>
       {/* Header */}
       <header className={sectionSpacingClasses}>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">Links</h1>
-        <p className="text-xl md:text-2xl text-muted-foreground font-light">
-          Find me elsewhere on the internet.
-        </p>
+        <h1 className={pageTitleClasses}>Links</h1>
+        <p className={pageSubtitleClasses}>Find me elsewhere on the internet.</p>
       </header>
 
       {/* Links Grid */}

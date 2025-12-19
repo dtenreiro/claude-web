@@ -4,7 +4,7 @@ import { renderBioParagraphs } from '@/lib/markdown';
 import { SectionHeader } from '@/components/section-header';
 import { ExperienceItem } from '@/components/experience-item';
 import { EducationItem } from '@/components/education-item';
-import { articleSpacingClasses, sectionSpacingClasses } from '@/lib/styles';
+import { articleSpacingClasses, sectionSpacingClasses, pageTitleClasses } from '@/lib/styles';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -15,9 +15,7 @@ export default function HomePage() {
   return (
     <article className={articleSpacingClasses}>
       <header>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-          About Daniel
-        </h1>
+        <h1 className={pageTitleClasses}>About Daniel</h1>
       </header>
 
       <section className={sectionSpacingClasses}>
