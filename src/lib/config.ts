@@ -1,4 +1,33 @@
 // Personal configuration - Update this file with your information
+
+// Type definitions for highlights
+export interface LinkEmbedData {
+  url: string;
+  title: string;
+  source: string;
+  description?: string;
+  date?: string;
+}
+
+export interface HighlightItem {
+  quote?: string;
+  embedUrl?: string;
+  linkEmbed?: LinkEmbedData;
+  title?: string;
+  description?: string;
+  author?: string;
+  source?: string;
+  sourceUrl?: string;
+  date?: string;
+  context?: string;
+}
+
+export interface HighlightSection {
+  category: string;
+  subject?: string;
+  items: HighlightItem[];
+}
+
 export const siteConfig = {
   // Basic Info
   name: 'Daniel Tenreiro',

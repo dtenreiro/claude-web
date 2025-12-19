@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { siteConfig } from '@/lib/config';
+import { siteConfig, HighlightItem } from '@/lib/config';
 import { SectionHeader } from '@/components/section-header';
 import { TweetEmbed } from '@/components/tweet-embed';
 import { LinkEmbed } from '@/components/link-embed';
@@ -39,7 +39,7 @@ export default function HighlightsPage() {
               </h3>
             )}
             <div className="flex flex-col gap-6">
-              {section.items.map((item, itemIndex) => (
+              {section.items.map((item: HighlightItem, itemIndex) => (
                 <div key={itemIndex} className="flex flex-col gap-2">
                   {'embedUrl' in item && item.embedUrl && (
                     <TweetEmbed tweetUrl={item.embedUrl} />
