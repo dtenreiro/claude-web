@@ -49,6 +49,37 @@ export const footerPaddingClasses = 'py-6 md:py-6 lg:py-6';
 export const linkTransitionClasses = 'hover:text-foreground transition-colors';
 
 /**
+ * Page title heading classes (h1)
+ */
+export const pageTitleClasses = 'text-4xl md:text-5xl font-bold tracking-tight leading-tight';
+
+/**
+ * Page subtitle/description classes
+ */
+export const pageSubtitleClasses = 'text-xl md:text-2xl text-muted-foreground font-light leading-relaxed';
+
+/**
+ * Inline link styling (underline with hover)
+ */
+export const inlineLinkClasses = 'underline underline-offset-2 hover:opacity-80';
+
+/**
+ * Blockquote styling
+ */
+export const blockquoteClasses =
+  'text-lg text-foreground leading-relaxed border-l-2 border-border pl-4 italic';
+
+/**
+ * Prose text styling for body content
+ */
+export const proseTextClasses = 'text-foreground leading-relaxed';
+
+/**
+ * Muted text for secondary content
+ */
+export const mutedTextClasses = 'text-muted-foreground';
+
+/**
  * Combine multiple class strings
  */
 export function cn(...classes: (string | undefined | false)[]): string {

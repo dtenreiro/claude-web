@@ -133,12 +133,20 @@ He is a native of New York City and attended **Regis High School** (2015) and **
       subject: '',
       items: [
         {
-          quote:
-            'Mr. tenreiro : i saw your post on Don Quixote and others and I am very impressed. vic',
+          embedUrl: 'https://x.com/VicNiederhoffer/status/1867015903105175676',
           author: 'Vic Niederhoffer',
           source: 'Twitter',
           sourceUrl: 'https://x.com/VicNiederhoffer',
           date: 'December 11, 2024',
+        },
+        {
+          quote:
+            '"The thing is to turn crazy without any provocation," Quixote tells Sancho Panza, explaining his decision to abandon his quiet life and pursue knight-errantry.',
+          author: 'Victor Niederhoffer',
+          source: 'Daily Speculations',
+          sourceUrl: 'https://dailyspeculations.com/wordpress/?p=14254',
+          date: 'December 13, 2024',
+          context: 'Citing "A Quixotic President" by Daniel Tenreiro',
         },
       ],
     },

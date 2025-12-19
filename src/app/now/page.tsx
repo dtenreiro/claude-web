@@ -1,7 +1,13 @@
 import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
 import { SectionHeader } from '@/components/section-header';
-import { articleSpacingClasses, sectionSpacingClasses, focusRingClasses } from '@/lib/styles';
+import {
+  articleSpacingClasses,
+  sectionSpacingClasses,
+  focusRingClasses,
+  pageTitleClasses,
+  pageSubtitleClasses,
+} from '@/lib/styles';
 
 export const metadata: Metadata = {
   title: 'Now',
@@ -13,13 +19,9 @@ export default function NowPage() {
     <article className={articleSpacingClasses}>
       {/* Header */}
       <header className={sectionSpacingClasses}>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
-          Now
-        </h1>
+        <h1 className={pageTitleClasses}>Now</h1>
         <div className={sectionSpacingClasses}>
-          <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
-            What I&apos;m focused on at this point in my life.
-          </p>
+          <p className={pageSubtitleClasses}>What I&apos;m focused on at this point in my life.</p>
           <div className="text-foreground">
             Last updated: {siteConfig.now.updated}.
           </div>

@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Navigation } from '@/components/navigation';
 import { Footer } from '@/components/footer';
 import { Container } from '@/components/container';
+import { ErrorBoundary } from '@/components/error-boundary';
+import { JsonLd } from '@/components/json-ld';
 import { siteConfig } from '@/lib/config';
 import './globals.css';
 
@@ -52,11 +54,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <JsonLd />
       </head>
       <body className="flex min-h-dvh flex-col antialiased">
         <Navigation />
         <main className="flex w-full flex-1 flex-col items-center">
-          <Container className={`${pagePaddingClasses} animate-fade-in`}>{children}</Container>
+          <Container className={`${pagePaddingClasses} animate-fade-in`}>
+            <ErrorBoundary>{children}</ErrorBoundary>
+          </Container>
         </main>
         <Footer />
       </body>

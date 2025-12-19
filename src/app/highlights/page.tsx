@@ -1,7 +1,18 @@
 import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
 import { SectionHeader } from '@/components/section-header';
-import { articleSpacingClasses, sectionSpacingClasses, focusRingClasses } from '@/lib/styles';
+import { TweetEmbed } from '@/components/tweet-embed';
+import { LinkEmbed } from '@/components/link-embed';
+import {
+  articleSpacingClasses,
+  sectionSpacingClasses,
+  focusRingClasses,
+  pageTitleClasses,
+  pageSubtitleClasses,
+  blockquoteClasses,
+  inlineLinkClasses,
+  mutedTextClasses,
+} from '@/lib/styles';
 
 export const metadata: Metadata = {
   title: 'Highlights',
@@ -13,10 +24,8 @@ export default function HighlightsPage() {
     <article className={articleSpacingClasses}>
       {/* Header */}
       <header className={sectionSpacingClasses}>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">Highlights</h1>
-        <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed">
-          Notable mentions, reviews, and selected writing.
-        </p>
+        <h1 className={pageTitleClasses}>Highlights</h1>
+        <p className={pageSubtitleClasses}>Notable mentions, reviews, and selected writing.</p>
       </header>
 
       {/* Highlight Sections */}
@@ -32,8 +41,14 @@ export default function HighlightsPage() {
             <div className="flex flex-col gap-6">
               {section.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="flex flex-col gap-2">
+                  {'embedUrl' in item && item.embedUrl && (
+                    <TweetEmbed tweetUrl={item.embedUrl} />
+                  )}
+                  {'linkEmbed' in item && item.linkEmbed && (
+                    <LinkEmbed {...item.linkEmbed} />
+                  )}
                   {'quote' in item && item.quote && (
-                    <blockquote className="text-lg text-foreground leading-relaxed border-l-2 border-border pl-4 italic">
+                    <blockquote className={blockquoteClasses}>
                       &ldquo;{item.quote}&rdquo;
                     </blockquote>
                   )}
@@ -44,7 +59,7 @@ export default function HighlightsPage() {
                           href={item.sourceUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`underline underline-offset-2 hover:opacity-80 ${focusRingClasses}`}
+                          className={`${inlineLinkClasses} ${focusRingClasses}`}
                         >
                           {item.title}
                         </a>
@@ -54,31 +69,37 @@ export default function HighlightsPage() {
                     </h4>
                   )}
                   {'description' in item && item.description && (
-                    <p className="text-muted-foreground">{item.description}</p>
+                    <p className={mutedTextClasses}>{item.description}</p>
                   )}
-                  <div className="text-sm text-muted-foreground">
-                    {'author' in item && item.author && <span>&mdash;{item.author}</span>}
-                    {'source' in item && item.source && (
-                      <span>
-                        {'author' in item && item.author && ', '}
-                        {'sourceUrl' in item && item.sourceUrl ? (
-                          <a
-                            href={item.sourceUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`italic underline underline-offset-2 hover:opacity-80 ${focusRingClasses}`}
-                          >
-                            {item.source}
-                          </a>
-                        ) : (
-                          <span className="italic">{item.source}</span>
-                        )}
-                      </span>
-                    )}
-                    {'date' in item && item.date && (
-                      <span className="ml-2 text-muted-foreground/60">({item.date})</span>
-                    )}
-                  </div>
+                  {!('embedUrl' in item && item.embedUrl) &&
+                    !('linkEmbed' in item && item.linkEmbed) && (
+                    <div className="text-sm text-muted-foreground">
+                      {'author' in item && item.author && <span>&mdash;{item.author}</span>}
+                      {'source' in item && item.source && (
+                        <span>
+                          {'author' in item && item.author && ', '}
+                          {'sourceUrl' in item && item.sourceUrl ? (
+                            <a
+                              href={item.sourceUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={`italic underline underline-offset-2 hover:opacity-80 ${focusRingClasses}`}
+                            >
+                              {item.source}
+                            </a>
+                          ) : (
+                            <span className="italic">{item.source}</span>
+                          )}
+                        </span>
+                      )}
+                      {'date' in item && item.date && (
+                        <span className="ml-2 text-muted-foreground/60">({item.date})</span>
+                      )}
+                      {'context' in item && item.context && (
+                        <span className="block mt-1 text-muted-foreground/80">{item.context}</span>
+                      )}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
