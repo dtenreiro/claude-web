@@ -106,6 +106,58 @@ He is a native of New York City and attended **Regis High School** (2015) and **
     // Add more links as needed
   ],
 
+  // Highlights (notable mentions, reviews, praise)
+  highlights: [
+    {
+      category: 'Serotonin Blurb',
+      subject: 'Serotonin: A Novel',
+      items: [
+        {
+          quote:
+            'Michel Houellebecq might be the most brilliant and maddening French writer alive ... Houellebecq is always worth reading because he confronts his readers with fundamental questions. Is selfless love possible? After a certain age, is human life worthwhile?',
+          author: 'Paul W. Gleason',
+          source: 'The National Book Review',
+          sourceUrl: '',
+        },
+        {
+          quote:
+            'We are living in the imagination of Michel Houellebecq ... Indeed, the rise of populism in the U.S. and Europe might as well have been choreographed by Houellebecq ... [He] has refined his style, developing richer plot points and keener social commentary ... Society has begun to catch up to Houellebecq\'s long-standing beefs with the sexual revolution, and whereas his invectives against neoliberalism seemed out of touch in the heady atmosphere of the end-of-history 1990s, they are now more apt than ever. In Serotonin, we are in a hell of our own, which we have built to our own taste.',
+          author: 'Daniel Tenreiro',
+          source: 'National Review',
+          sourceUrl: 'https://www.nationalreview.com/2019/01/serotonin-michel-houellebecq-novel-review/',
+        },
+      ],
+    },
+    {
+      category: 'Mentions',
+      subject: '',
+      items: [
+        {
+          quote:
+            'Mr. tenreiro : i saw your post on Don Quixote and others and I am very impressed. vic',
+          author: 'Vic Niederhoffer',
+          source: 'Twitter',
+          sourceUrl: 'https://x.com/VicNiederhoffer',
+          date: 'December 11, 2024',
+        },
+      ],
+    },
+    {
+      category: 'Selected Writing',
+      subject: '',
+      items: [
+        {
+          title: 'A Quixotic President',
+          description:
+            'On the parallels between Don Quixote and modern political leadership.',
+          source: 'National Review',
+          sourceUrl: 'https://www.nationalreview.com/2021/01/a-quixotic-president/',
+          date: 'January 13, 2021',
+        },
+      ],
+    },
+  ],
+
   // Projects (used on Projects page)
   projects: [
     {
@@ -124,7 +176,7 @@ He is a native of New York City and attended **Regis High School** (2015) and **
   navigation: [
     { name: 'Home', href: '/' },
     { name: 'Now', href: '/now' },
-    { name: 'Projects', href: '/projects' },
+    { name: 'Highlights', href: '/highlights' },
     { name: 'Links', href: '/links' },
   ],
 };
