@@ -1,6 +1,6 @@
-# CLAUDE.md - AI Assistant Guide
+# CLAUDE.md
 
-This document provides essential information for AI assistants working with this codebase.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
@@ -163,10 +163,3 @@ Modify `siteConfig.experience` array with new job entries.
 
 ### Changing colors
 Edit CSS variables in `src/app/globals.css` for both `:root` (light) and `@media (prefers-color-scheme: dark)` (dark mode).
-
-## Testing Changes
-
-1. Run `npm run dev` to preview locally
-2. Run `npm run lint` to check for issues
-3. Run `npm run build` to ensure static export works
-4. Commit and push to trigger deployment

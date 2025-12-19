@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { siteConfig } from '@/lib/config';
 import { containerClasses, focusRingClasses, navPaddingClasses } from '@/lib/styles';
+import { ThemeToggle } from './theme-toggle';
 
 export function Navigation() {
   const pathname = usePathname();
@@ -14,25 +15,32 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           <Link
             href="/"
-            className={`text-foreground hover:text-muted-foreground font-semibold transition-colors rounded-md ${focusRingClasses}`}
+            className={`text-foreground hover:text-link font-semibold transition-colors rounded-md ${focusRingClasses}`}
           >
             {siteConfig.name}
           </Link>
-          <ul className="flex items-center gap-6">
-            {siteConfig.navigation.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`text-md transition-colors rounded-md ${focusRingClasses} focus-visible:text-foreground ${pathname === item.href
-                    ? 'text-foreground'
-                    : 'text-muted-foreground hover:text-foreground'
+          <div className="flex items-center gap-6">
+            <ul className="flex items-center gap-6">
+              {siteConfig.navigation.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={`text-md transition-colors rounded-md relative ${focusRingClasses} focus-visible:text-foreground ${
+                      pathname === item.href
+                        ? 'text-link font-medium'
+                        : 'text-muted-foreground hover:text-foreground'
                     }`}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+                  >
+                    {item.name}
+                    {pathname === item.href && (
+                      <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-link rounded-full" />
+                    )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ThemeToggle />
+          </div>
         </div>
       </nav>
     </header>

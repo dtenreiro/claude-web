@@ -32,6 +32,17 @@ export const metadata: Metadata = {
 
 import { pagePaddingClasses } from '@/lib/styles';
 
+const themeScript = `
+  (function() {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else if (theme === 'light') {
+      document.documentElement.classList.add('light');
+    }
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -39,10 +50,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="flex min-h-dvh flex-col antialiased">
         <Navigation />
         <main className="flex w-full flex-1 flex-col items-center">
-          <Container className={pagePaddingClasses}>{children}</Container>
+          <Container className={`${pagePaddingClasses} animate-fade-in`}>{children}</Container>
         </main>
         <Footer />
       </body>

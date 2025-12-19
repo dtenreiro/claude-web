@@ -9,12 +9,15 @@
   --border: #e5e7eb;
   --accent: #111827;
   --accent-foreground: #ffffff;
+  --link: #3b82f6;
+  --link-hover: #2563eb;
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+/* Dark mode - OS preference (default) */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light) {
     /* Dark mode colors - Deep Slate Palette */
     --background: #030712;
     --foreground: #f9fafb;
@@ -23,7 +26,35 @@
     --border: #1f2937;
     --accent: #f9fafb;
     --accent-foreground: #030712;
+    --link: #60a5fa;
+    --link-hover: #93c5fd;
   }
+}
+
+/* Manual dark mode override */
+:root.dark {
+  --background: #030712;
+  --foreground: #f9fafb;
+  --muted: #111827;
+  --muted-foreground: #9ca3af;
+  --border: #1f2937;
+  --accent: #f9fafb;
+  --accent-foreground: #030712;
+  --link: #60a5fa;
+  --link-hover: #93c5fd;
+}
+
+/* Manual light mode override */
+:root.light {
+  --background: #ffffff;
+  --foreground: #111827;
+  --muted: #f9fafb;
+  --muted-foreground: #6b7280;
+  --border: #e5e7eb;
+  --accent: #111827;
+  --accent-foreground: #ffffff;
+  --link: #3b82f6;
+  --link-hover: #2563eb;
 }
 
 @theme inline {
@@ -34,6 +65,8 @@
   --color-border: var(--border);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
   --font-sans: var(--font-sans);
 }
 
@@ -148,4 +181,68 @@ a {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
+}
+
+/* Page fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* Staggered animation delays */
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+/* Enhanced link styles with accent color */
+.link-accent {
+  color: var(--link);
+  transition: color 0.2s ease;
+}
+
+.link-accent:hover {
+  color: var(--link-hover);
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--foreground);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--muted);
+  border-color: var(--muted-foreground);
+}
+
+/* Card hover scale effect */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.02);
 }

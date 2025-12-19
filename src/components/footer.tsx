@@ -12,15 +12,19 @@ export function Footer() {
   ].filter((link) => link.url);
 
   return (
-    <footer className="border-border flex justify-center border-t">
+    <footer className="border-border bg-muted/30 mt-auto flex justify-center border-t">
       <div className={`${containerClasses} ${footerPaddingClasses}`}>
         <div className="text-muted-foreground flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
           <p>
             &copy; {currentYear} {siteConfig.name}
           </p>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             {socialLinks.map((link) => (
-              <ExternalLink key={link.name} href={link.url!}>
+              <ExternalLink
+                key={link.name}
+                href={link.url!}
+                className="hover:text-link transition-colors"
+              >
                 {link.name}
               </ExternalLink>
             ))}
